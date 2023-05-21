@@ -1,0 +1,28 @@
+server:
+  port: 8088
+
+# 数据库连接配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://120.25.255.207:3306/bookStore?useSSL=false
+    username: root
+    password: chx200205173214
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static
+    suffix: .html
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted #默认deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
